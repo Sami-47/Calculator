@@ -4,11 +4,11 @@ using System.Collections;
 
 //Choice for users
 enum Operations {
-                A, 
-                S,
-                M,
-                D,
-                P
+                a, 
+                s,
+                m,
+                d,
+                p
            }
 
 namespace Calculator
@@ -26,53 +26,55 @@ namespace Calculator
         float result = 0;
         public void getResult(){
             switch(Enum.Parse<Operations>(this.Choice)){
-                case Operations.A:
-                    result = addition(this.Input1, this.Input2);
+                case Operations.a:
+                    addition(this.Input1, this.Input2);
                         break;
-                case Operations.S:
-                        result = subtraction(this.Input1, this.Input2);
+                case Operations.s:
+                    subtraction(this.Input1, this.Input2);
                           break;
-                case Operations.M:
-                        result = multiplication(this.Input1, this.Input2);
+                case Operations.m:
+                      multiplication(this.Input1, this.Input2);
                           break;
-                case Operations.D:
-                        result = division(this.Input1, this.Input2);
+                case Operations.d:
+                        division(this.Input1, this.Input2);
                           break;
-                case Operations.P:
-                        result = power(this.Input1, this.Input2);
+                case Operations.p:
+                        power(this.Input1, this.Input2);
                           break;
                default: 
                  Console.WriteLine("Operation not recognized");
                     break;
              }
-             Console.WriteLine("Result is "+result);
         }
              
-        public float addition(float num1, float num2){
-            return num1 + num2;
+        public void addition(float num1, float num2){
+            Console.WriteLine( $" Result: {num1 + num2}");
 
         }
-        public float subtraction(float num1, float num2){
-            return num1 - num2;
+        public void subtraction(float num1, float num2){
+            Console.WriteLine ($" Result: {num1 - num2}");
 
         }
-        public float multiplication(float num1, float num2){
-            return num1 * num2;
+        public void multiplication(float num1, float num2){
+            Console.WriteLine ($" Result: {num1 * num2}");
 
         }
-        public float division(float num1, float num2){
-            float value = -1;
-            string ErrorString = "Cannot divide by Zero";
+        public void division(float num1, float num2){
                try {
-                   if(num2 > 0) return num1 / num2;
-                }catch (DivideByZeroException e) {
-                ErrorString = e.Message;
-                Console.WriteLine (ErrorString);
+                   if(num2 > 0){
+                       Console.WriteLine ($" Result: {num1 / num2}");     
+                    } 
+                }catch
+                {
+                    Console.Write("Error occurred.");
+                }
+                finally
+                {
+                    Console.Write("Re-try with a different number.");
+                }
             }
-            return value; 
-        }
-        public static float power(float num1, float num2){
-            return (float)Math.Pow(num1, num2);
+        public static void power(float num1, float num2){
+            Console.WriteLine ($"Result{(float)Math.Pow(num1, num2)}");
         }
     }
 
@@ -82,33 +84,36 @@ namespace Calculator
         {
             
             float input1, input2;
-            string choice;
+            string? choice;
             Console.WriteLine(".........................");
             Console.WriteLine("Enter first number");
             input1 = float.Parse(Console.ReadLine());
             Console.WriteLine("Enter second number");
             input2 = float.Parse(Console.ReadLine());
             Console.WriteLine("Enter operation");
-            Console.WriteLine("Choose A => Addition\nS => Subtraction\nM => Multiplication\nD => Division\nP => Power");
+            Console.WriteLine("Choose a => Addition\ns => Subtraction\nm => Multiplication\nd => Division\np => Power");
             choice = Console.ReadLine();
-
             var isValid = validateInput(input1, input2, choice);
             //validate if user has inputed values
             if(isValid){
                 CalculatorOperation calc =  new CalculatorOperation(input1, input2, choice);
                 calc.getResult();
             } else{
-                Console.WriteLine("Please input proper values");
-            }    
-        }
+                Console.WriteLine("Enter proper values");
+            }
+        }   
 
         public static bool validateInput(float? input1, float? input2, string? choice){
     
-            if(input1 != null && input2 != null && choice !=null){
-                return true;
-            } else{
-                return false;
+            try{
+                if(input1 != null && input2 != null && choice !=null){
+                    return true;
+                }
+            } catch(Exception e){
+                Console.WriteLine("Enter Proper values" + e.Message);
+                
             }
+            return false;
         }    
     }     
 }
