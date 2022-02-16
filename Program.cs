@@ -70,7 +70,7 @@ namespace Calculator
                 }
                 finally
                 {
-                    Console.Write("Re-try with a different number.");
+                    Console.Write("Re-try with a different number");
                 }
             }
         public static void power(float num1, float num2){
