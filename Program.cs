@@ -95,25 +95,26 @@ namespace Calculator
             choice = Console.ReadLine();
             var isValid = validateInput(input1, input2, choice);
             //validate if user has inputed values
-            if(isValid){
+            try{
+                if(isValid){
                 CalculatorOperation calc =  new CalculatorOperation(input1, input2, choice);
                 calc.getResult();
-            } else{
-                Console.WriteLine("Enter proper values");
             }
+            
+            } catch(NullReferenceException e){
+                Console.WriteLine("Enter proper values" +e.Message);
+            } finally
+                {
+                    Console.Write("Enter proper values");
+                } 
         }   
 
         public static bool validateInput(float? input1, float? input2, string? choice){
     
-            try{
                 if(input1 != null && input2 != null && choice !=null){
                     return true;
                 }
-            } catch(Exception e){
-                Console.WriteLine("Enter Proper values" + e.Message);
-                
-            }
-            return false;
+               return false;
         }    
     }     
 }
