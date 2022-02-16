@@ -1,0 +1,15 @@
+D:\Users\awesa\Desktop\C#_tutorial\Calculator\obj\Debug\net6.0\Calculator.csproj.AssemblyReference.cache
+D:\Users\awesa\Desktop\C#_tutorial\Calculator\obj\Debug\net6.0\Calculator.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\awesa\Desktop\C#_tutorial\Calculator\obj\Debug\net6.0\Calculator.AssemblyInfoInputs.cache
+D:\Users\awesa\Desktop\C#_tutorial\Calculator\obj\Debug\net6.0\Calculator.AssemblyInfo.cs
+D:\Users\awesa\Desktop\C#_tutorial\Calculator\obj\Debug\net6.0\Calculator.csproj.CoreCompileInputs.cache
+D:\Users\awesa\Desktop\C#_tutorial\Calculator\bin\Debug\net6.0\Calculator.exe
+D:\Users\awesa\Desktop\C#_tutorial\Calculator\bin\Debug\net6.0\Calculator.deps.json
+D:\Users\awesa\Desktop\C#_tutorial\Calculator\bin\Debug\net6.0\Calculator.runtimeconfig.json
+D:\Users\awesa\Desktop\C#_tutorial\Calculator\bin\Debug\net6.0\Calculator.dll
+D:\Users\awesa\Desktop\C#_tutorial\Calculator\bin\Debug\net6.0\ref\Calculator.dll
+D:\Users\awesa\Desktop\C#_tutorial\Calculator\bin\Debug\net6.0\Calculator.pdb
+D:\Users\awesa\Desktop\C#_tutorial\Calculator\obj\Debug\net6.0\Calculator.dll
+D:\Users\awesa\Desktop\C#_tutorial\Calculator\obj\Debug\net6.0\ref\Calculator.dll
+D:\Users\awesa\Desktop\C#_tutorial\Calculator\obj\Debug\net6.0\Calculator.pdb
+D:\Users\awesa\Desktop\C#_tutorial\Calculator\obj\Debug\net6.0\Calculator.genruntimeconfig.cache
